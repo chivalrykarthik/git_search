@@ -25,6 +25,7 @@ class SearchCmp extends React.Component {
 
         this.setState({"searchInProgress":true});
         if (!this.state.query || !this.state.language) {
+            this.setState({"searchInProgress":false});
             return alert("Please enter valid data to search");
         }
         axios.get(`search/repositories?q=${this.state.query}+language:${this.state.language}&sort=stars&order=desc`)
@@ -34,6 +35,7 @@ class SearchCmp extends React.Component {
             })
             .catch(e => {
                 console.log(e.stack);
+                this.setState({"searchInProgress":false});
                 alert("We are not getting valid response from Github. Please try again later");
             })
     }
