@@ -37,7 +37,7 @@ class SearchCmp extends React.Component {
                 console.log(e.stack);
                 this.setState({"searchInProgress":false});
                 alert("We are not getting valid response from Github. Please try again later");
-            })
+            });
     }
     render() {
         return (
@@ -52,7 +52,7 @@ class SearchCmp extends React.Component {
                         <div className="col-sm-3">
                             <input type="text" className="form-control" placeholder="language" name="language" value={this.state.language} onChange={this.handleChange} />
                         </div>
-                        <div className="col-sm-4">
+                        <div className="col-sm-4 d-none">
                             <input type="text" className="form-control" placeholder="Or Repo URL" />
                         </div>
                         <div className="col-sm-2">
