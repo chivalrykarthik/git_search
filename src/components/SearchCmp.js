@@ -25,11 +25,6 @@ class SearchCmp extends React.Component {
         });
     }
     handleSearch() {
-        /*this.setState(state => {
-            state.searchQuery = this.state.query;
-            state.searchLanguage = this.state.language;
-            return state;
-        });*/
         if (this.state.searchInProgress) return;
         if (!this.state.query || !this.state.language) {
             this.setState({ "searchInProgress": false });
@@ -86,8 +81,6 @@ class SearchCmp extends React.Component {
                                 <button type="button" className={"btn btn-success float-left" + (this.state.searchInProgress ? " disabled" : "")} onClick={this.handleSearch}>Search</button>
                             </div>
                         </div>
-
-
                     </form>
                 </div>
             </div>

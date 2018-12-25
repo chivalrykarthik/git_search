@@ -32,16 +32,20 @@ class App extends Component {
       
       return state;
     });
-    //this.setState({pageConf:{page:pageNo}});
   }
   render() {
     return (
       <>
         <div className="container">
           <Header />
+
           <SearchCmp setRecords={this.setRecords} pageConf={{page:this.state.page,per_page:this.state.per_page}} setPage={this.setPage} />
+
           <PaginationCmp totalCount={this.state.totalCount} setPage={this.setPage} pageConf={{page:this.state.page,per_page:this.state.per_page}} />
+          <br />
+
           <TableCmp records={this.state.records} totalCount={this.state.totalCount} />
+
           <PaginationCmp totalCount={this.state.totalCount} setPage={this.setPage} pageConf={{page:this.state.page,per_page:this.state.per_page}} />
         </div>
       </>
