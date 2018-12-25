@@ -1,8 +1,6 @@
 import React from 'react';
 
 
-
-
 function HeadingCmp(props) {
 
     return (
@@ -59,19 +57,19 @@ function ProcessCmp(props) {
     return element;
 }
 
-class TableCmp extends React.Component {
-
+class TableCmp extends React.Component {    
     render() {
-
         return (
-            <>
-                <div className="col-sm-12">
-                    <table className="table table-hover">
-                        <HeadingCmp />
-                        <BodyCmp {...this.props} />
+            <>                
+                <div className="row">
+                    <div className="col-sm-12">
+                        <table className="table table-hover">
+                            <HeadingCmp />
+                            <BodyCmp {...this.props} />
 
-                    </table>
-                </div>
+                        </table>
+                    </div>
+                </div>                
             </>
         )
     }
