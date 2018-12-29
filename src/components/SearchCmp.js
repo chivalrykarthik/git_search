@@ -101,7 +101,11 @@ class SearchCmp extends React.Component {
                             <InputComponent className="col-sm-3" placeholder="Topic" name="topic" value={this.state.topic} onChange={this.handleChange} />
 
                             <div className="col-sm-2">
-                                <button type="button" className={"btn btn-success float-left" + (this.state.searchInProgress ? " disabled" : "")} onClick={this.handleSearch}>Search</button>
+                                <button type="button" className={"btn btn-success btn-md float-left" + (this.state.searchInProgress ? " disabled" : "")} onClick={this.handleSearch}>
+                                
+                                <i className={this.state.searchInProgress?"spinner-border spinner-border-sm":"fa fa-md fa-search"}></i>&nbsp;Search
+                                
+                                </button>
                             </div>
                         </div>
                     </form>
