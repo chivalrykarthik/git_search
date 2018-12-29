@@ -63,7 +63,7 @@ class TableCmp extends React.Component {
             <>                
                 <div className="row">
                     <div className="col-sm-12">
-                        <table className="table table-hover">
+                        <table className="table table-hover table-responsive-sm">
                             <HeadingCmp />
                             <BodyCmp {...this.props} />
 
