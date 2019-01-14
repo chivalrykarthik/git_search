@@ -15,7 +15,7 @@ class App extends Component {
     this.state.records = [];
     this.state.totalCount = 0;
     this.state.page = 1
-    this.state.per_page = 10;
+    this.state.per_page = 5;
     this.state.popupcontent = '';
     this.setRecords = this.setRecords.bind(this);
     this.setPage = this.setPage.bind(this);

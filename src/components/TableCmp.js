@@ -49,7 +49,7 @@ function ProcessCmp(props) {
                 <td className="col-3">{(value.owner && value.owner.login) ? value.owner.login : ''}</td>
                 <td className="col-2">{value.forks_count || '-'}</td>
                 <td className="col-2">{value.stargazers_count || '-'}</td>
-                <td className="col-2">{value.html_url ? <a href={value.html_url} target="_blank" rel="noopener noreferrer">Link to Repo</a> : '-'}</td>
+                <td className="col-2">{value.html_url ? <a href={value.html_url} target="_blank" rel="noopener noreferrer">Link</a> : '-'}</td>
             </tr>
         )
     });
