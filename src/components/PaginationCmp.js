@@ -30,8 +30,8 @@ function PaginationCmp(props) {
         <>
             <div className="row">
                 <div className="col-sm-12 ">
-                    <PageingCmp className={"btn btn-info float-left" + enablePrev} onClick={handlePaginaiton.bind(null, 'prev', page, props.setPage,enablePrev)} >Prev</PageingCmp>
-                    <PageingCmp className={"btn btn-info float-right" + enableNext} onClick={handlePaginaiton.bind(null, 'next', page, props.setPage,enableNext)} >Next</PageingCmp>
+                    <PageingCmp className={"curvey-btn btn btn-info float-left" + enablePrev} onClick={handlePaginaiton.bind(null, 'prev', page, props.setPage,enablePrev)} >Prev</PageingCmp>
+                    <PageingCmp className={"curvey-btn btn btn-info float-right" + enableNext} onClick={handlePaginaiton.bind(null, 'next', page, props.setPage,enableNext)} >Next</PageingCmp>
                 </div>
             </div>
         </>

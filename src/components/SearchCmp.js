@@ -38,7 +38,8 @@ class SearchCmp extends React.Component {
         if (this.state.searchInProgress) return;
         if (!this.state.query && !this.state.language  && !this.state.topic) {
             this.setState({ "searchInProgress": false });
-            return alert("Please enter valid data to search");
+            
+            return this.props.setPopup("Please enter valid data to search");
         }
         this.props.setPage(1);
         this.setState({ "searchQuery": this.state.query, "searchLanguage": this.state.language,"searchTopic": this.state.topic, "newSearch": true }, () => {
@@ -65,7 +66,8 @@ class SearchCmp extends React.Component {
         this.setState({ "searchInProgress": true });
         if (!this.state.searchQuery && !this.state.searchLanguage && !this.state.searchTopic) {
             this.setState({ "searchInProgress": false });
-            return alert("Please enter valid data to search");
+            
+            return this.props.setPopup("Please enter valid data to search");
         }
         const searchURL = this.prepareSearchURL(pageNo);
 
@@ -77,7 +79,7 @@ class SearchCmp extends React.Component {
             .catch(e => {
                 console.log(e.stack);
                 this.setState({ "searchInProgress": false, newSearch: false });
-                alert("We are not getting valid response from Github. Please try again later");
+                this.props.setPopup("We are not getting valid response from Github. Please try again later");
             });
     }
 
@@ -101,7 +103,7 @@ class SearchCmp extends React.Component {
                             <InputComponent className="col-sm-3" placeholder="Topic" name="topic" value={this.state.topic} onChange={this.handleChange} />
 
                             <div className="col-sm-2">
-                                <button type="button" className={"btn btn-success btn-md float-left" + (this.state.searchInProgress ? " disabled" : "")} onClick={this.handleSearch}>
+                                <button type="button" className={"btn btn-success btn-md float-left curvey-btn" + (this.state.searchInProgress ? " disabled" : "")} onClick={this.handleSearch}>
                                 
                                 <i className={this.state.searchInProgress?"spinner-border spinner-border-sm":"fa fa-md fa-search"}></i>&nbsp;Search
                                 
