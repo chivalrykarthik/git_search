@@ -5,7 +5,11 @@
 }
 
 .animate-logo{
-/*  animation: App-logo-spin infinite 20s linear;*/
+/*animation: App-logo-spin infinite 20s linear;*/
+}
+
+.curvey-btn{
+  border-radius: 20px;
 }
 
 .overlay{
@@ -29,9 +33,7 @@
 
 
 
-.curvey-btn{
-  border-radius: 20px;
-}
+
 .overlay_heading {
   width:100%;
   margin-left:2%
@@ -45,16 +47,21 @@
 }
 .show-div{
   display: block;
-  animation-name:on;
-  animation-duration:0.5s;
+ /* animation-name:on;
+  animation-duration:0.2s;*/
+  animation:on 0.3s ease forwards;
 }
 
 .hide-div{
   display: none;
 }
+
+.rotate{
+ animation: App-logo-spin infinite 20s linear;
+}
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(360deg); }
 }
 
 @keyframes on{
