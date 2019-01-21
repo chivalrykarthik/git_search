@@ -47,8 +47,7 @@
 }
 .show-div{
   display: block;
- /* animation-name:on;
-  animation-duration:0.2s;*/
+ 
   animation:on 0.3s ease forwards;
 }
 
@@ -65,16 +64,12 @@
 }
 
 @keyframes on{
-  from{ 
-  
-  margin: -20% auto;
-  
+  from{  
+  margin: -20% auto;  
   };
 
-  to{ 
-  
-  margin: 20% auto;
-  
+  to{  
+  margin: 20% auto;  
   };
 
 }
